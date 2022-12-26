@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+/* cssリセット */
+
+body,
+h1,
+h2,
+h3,
+ul,
+li,
+p {
+    margin: 0;
+    margin: 0;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    color: #4c4c4c;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
+
+.wrap {
+    /*2,max-widthで全体の幅を書く　最大960pxまで広がる。960px以下になると可変する*/
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.wrap div {
+    /*3,横幅を%で記述する。画面幅が小さくなっても同じサイズで可変する*/
+    box-sizing: border-box;
+    width: 33.33333%;
+    padding: 30px 10px;
+}
+
+
+/*4,cssでスマホ用の記述をする*/
+@media screen and (max-width: 499px) {
+
+    /*　画面サイズ 499px以下になったらここに書いてあるcssが適用される　*/
+    .wrap {
+        display: block;
+    }
+
+    .wrap div {
+        width: 100%;
+        padding: 10px 10px;
+    }
+
+}
