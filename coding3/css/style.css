@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+/* cssリセット */
+
+/*利用するタグによってこちらの内容は増やす*/
+
+html,
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dt,
+dd,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  /*デフォルトの文字色、font-familyを予め当てておく*/
+  color: #000;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+    "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}
+
+a {
+  /*下線を消す*/
+  text-decoration: none;
+  /*色を消す*/
+  color: inherit;
+}
+
+ul {
+  /*左の「・」を消す*/
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+  border: none;
+}
+
+/*ここから課題です。*/
+
+body {
+  background-color: #eee;
+}
+
+.service h1 {
+  text-align: center;
+  margin: 30px auto;
+}
+
+.service h1,
+.service h2 {
+  color: rgb(5, 87, 73);
+}
+
+.service h2 {
+  margin: 10px;
+  padding: 0 10px;
+  border-left: 7px solid rgb(5, 87, 73);
+}
+
+.content p {
+  padding: 0 10px 10px;
+  margin: 0;
+}
+
+.content img {
+  width: 100%;
+}
+.service {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  width: 32%;
+  margin: 0;
+  background-color: white;
+}
+
+@media screen and (max-width: 400px) {
+  .content {
+    display: block;
+    padding: 0 30px;
+  }
+  .card {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
