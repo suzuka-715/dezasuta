@@ -93,9 +93,7 @@ main {
 .message,
 .about,
 .menu,
-.gallery,
-.event,
-.access {
+.event {
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -104,19 +102,20 @@ main {
 
 .message {
   text-align: center;
-  padding: 100px 0 80px;
+  padding: 100px 0 90px;
 }
 
 .message h2 {
   font-size: 82px;
   font-weight: normal;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
   line-height: 1.17;
+  letter-spacing: 0.1rem;
 }
 
-.message p {
+.message_main p {
   font-size: 30px;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 
 .message_sub p {
@@ -132,34 +131,29 @@ main {
   justify-content: space-between;
 }
 
-.about_image {
-  padding: 0 auto;
-  width: 50%;
-}
-
 .about_image img {
   border-radius: 0 0 82px 0;
 }
 
-.about_disc {
-  margin: 0;
-  padding: 0 10px;
+.about_discription {
+  padding: 50px 10px 0 0s;
   box-sizing: border-box;
   width: 42%;
 }
 
-.about_disc h2 {
-  width: 76%;
-  margin-bottom: 60px;
-}
-
-.about_disc h3 {
-  font-size: 44px;
-  line-height: 1.38;
+.about_discription h2 {
+  width: 66%;
   margin-bottom: 40px;
 }
 
-.about_disc p {
+.about_discription h3 {
+  font-size: 44px;
+  line-height: 1.38;
+  margin-bottom: 40px;
+  font-weight: normal;
+}
+
+.about_discription p {
   font-size: 16px;
   line-height: 1.62;
 }
@@ -171,15 +165,14 @@ main {
 
 .menu h2 {
   width: 15%;
-  text-align: center;
-  margin: 107px auto 50px;
+  margin: 95px auto 40px;
 }
 
 .menu_wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 100px;
+  margin-bottom: 85px;
 }
 
 .menu_wrap div {
@@ -193,7 +186,7 @@ main {
 .menu_wrap div h3 {
   color: #d30202;
   font-size: 38px;
-  margin: -8px 65% 10px 26px;
+  margin: -8px auto 15px 26px;
 }
 
 .menu_wrap div p {
@@ -202,78 +195,88 @@ main {
 }
 
 /*Gallery*/
-.gallery_title h2 {
-  align-items: center;
-  width: 12%;
-  margin-bottom: 50px;
+.gallery h2 {
+  width: 20%;
+  max-width: 245px;
+  margin: 0 auto 15px;
 }
 
 .gallery_content {
-  /*width: 100%;*/
-  /*display: flex;*/
+  width: 100%;
+  display: flex;
   margin: 0;
   padding: 0;
 }
 
 /*event*/
+.event {
+  padding: 0 10px;
+}
+
 .event h2 {
-  width: 16%;
+  width: 17%;
   text-align: center;
-  margin: 107px auto 50px;
+  margin: 60px auto 30px;
 }
 
 .event_details {
   border: 3px solid #4a2813;
   background-color: #fff;
-  margin-bottom: 80px;
-}
-.event_details ul {
-  margin: 27px 160px;
+  display: flex;
+  justify-content: center;
+  padding: 27px;
 }
 
 .event_details li {
   font-size: 23px;
-  line-height: 1.75;
+  line-height: 2;
 }
 
 .event_details a {
   text-decoration: underline 2px #4a2813;
+  margin-left: 55px;
 }
 
 /*access*/
 
 .access h2 {
   width: 20%;
-  margin: 0 auto 40px;
+  max-width: 213px;
+  margin: 70px auto 40px;
 }
 
 .access iframe {
   width: 100%;
+  display: block;
+  height: 470px;
 }
 
 /*footer*/
 .footer {
   background-color: #fff;
+  padding: 80px 10px;
 }
 
 .footer_wrap {
   max-width: 1000px;
   display: flex;
-  padding: 80px 10px;
+  margin: 0 auto 60px;
 }
 
-.footer_wrap h2 {
-  margin: 0 auto 0 0;
+.footer_logo {
+  margin-right: 70px;
   width: 226px;
 }
 
 .footer_wrap li {
   color: black;
   font-size: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .footer p {
   text-align: center;
+  margin-bottom: 40px;
+  color: black;
 }
 
 /* ボタン */
