@@ -84,6 +84,17 @@ img {
     "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
   text-align: center;
 }
+/*スライダー調整*/
+.slick-dots {
+  bottom: 20px;
+}
+.slick-dots li button:before,
+.slick-dots li.slick-active button:before {
+  color: #fff;
+}
+.slick-dotted.slick-slider {
+  margin-bottom: 0px;
+}
 
 /*ハンバーガーメニュー 20230122*/
 
@@ -229,16 +240,17 @@ main {
 }
 
 .about_image {
-  padding: 0 auto;
   width: 50%;
 }
 
 .about_image img {
   border-radius: 0 0 82px 0;
 }
-
+.about_image_sp img {
+  display: none;
+}
 .about_desc {
-  padding: 50px 10px 0 0;
+  padding: 50px 0;
   width: 42%;
 }
 
@@ -250,13 +262,14 @@ main {
 .about_desc h3 {
   font-size: 44px;
   line-height: 1.38;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-weight: normal;
 }
 
 .about_desc p {
   font-size: 16px;
   line-height: 1.62;
+  text-align: justify;
 }
 
 /*Menu*/
@@ -285,14 +298,16 @@ main {
 }
 
 .menu_wrap div h3 {
+  font-weight: normal;
   color: #d30202;
   font-size: 38px;
-  margin: -8px auto 15px 26px;
+  margin: -12px auto 20px 8px;
 }
 
 .menu_wrap div p {
   font-size: 17px;
   line-height: 1.47;
+  text-align: justify;
 }
 
 /*Gallery*/
@@ -389,21 +404,24 @@ main {
 
 /*レスポンシブデザイン*/
 @media screen and (min-width: 768px) and (max-width: 1100px) {
-  /*header???*/
-
   .header_slider source {
     width: 100%;
   }
   .about_desc h2 {
-    width: 160px;
+    width: 250px;
   }
-
-  .sp_br {
-    display: block;
+  .message_main p {
+    font-size: 25px;
+  }
+  .message_main h2 {
+    font-size: 70px;
+  }
+  .message_sub {
+    font-size: 20px;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   /*header*/
   .header_slider img {
     width: 100%;
@@ -421,13 +439,14 @@ main {
     padding: 40px 0 57px;
   }
   .message_main h2 {
-    white-space: nowrap;
     font-size: 38px;
-    margin-bottom: 25px;
+    letter-spacing: 0.02em;
+    margin-bottom: 10px;
   }
   .message_main p {
     font-size: 17px;
     margin-bottom: 25px;
+    line-height: 1.87;
   }
   .sp_br {
     display: block;
@@ -436,19 +455,20 @@ main {
     font-size: 16px;
     letter-spacing: 0.1em;
   }
+
   /*about*/
   .about {
     display: block;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
-
-  .about_image {
-    padding: 0;
-    width: 100%;
-  }
-
   .about_image img {
-    border-radius: 0;
+    display: none;
+  }
+  .about_image_sp {
+    margin-bottom: 30px;
+  }
+  .about_image_sp img {
+    display: block;
     width: 100%;
   }
   .about_desc {
@@ -458,14 +478,19 @@ main {
     max-width: 1100px;
   }
   .about_desc h2 {
-    text-align: center;
     width: 160px;
-    margin: 0 20px;
+    margin: 0 auto 10px;
   }
   .about_desc h3 {
+    padding: 0 20px;
     font-size: 36px;
-    line-height: 1.38;
+    line-height: 1.25;
   }
+  .about_desc p {
+    padding: 0 20px;
+    text-align: justify;
+  }
+
   /*menu*/
   .menu {
     padding: 0;
@@ -479,15 +504,16 @@ main {
   }
   .menu_wrap img {
     width: 100%;
-    box-sizing: border-boxs;
+    box-sizing: border-box;
   }
   .menu_wrap div {
-    width: 90%;
-    margin: 0 auto 50px;
+    width: 100%;
+    margin: 0 auto 30px;
+    padding: 0 38px;
+    box-sizing: border-box;
   }
   .menu_wrap div h3 {
     font-size: 40px;
-    margin: -8px auto 30px 25px;
   }
 
   /*gallery*/
@@ -516,6 +542,7 @@ main {
   }
   .event_details {
     display: block;
+    padding: 20px 28px;
   }
   .event_details li {
     font-size: 16px;
@@ -523,13 +550,17 @@ main {
   }
   .event_details a {
     margin: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
   .event_details ul li {
     display: flex;
     flex-direction: column;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
+    line-height: 1.2;
+  }
+  .event_details ul li + li {
+    margin-top: 25px;
   }
   /*access*/
   .access {
@@ -538,17 +569,17 @@ main {
   .access h2 {
     width: 124px;
     max-width: 213px;
-    margin: 0 auto 30px;
+    margin: 0 auto 5px;
   }
   .access iframe {
     width: 100%;
     box-sizing: border-box;
     display: block;
-    height: 230px;
+    height: 190px;
   }
   .footer {
     background-color: #fff;
-    padding: 0 10px;
+    padding: 0 20px;
   }
   .footer_wrap {
     display: block;
@@ -557,10 +588,14 @@ main {
   .footer_logo {
     margin: 0 auto 20px 0;
   }
+  .footer_wrap li {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
 
   /*ボタン*/
   .pagetop {
-    position: fixed;
+    right: 16px;
     width: 100px;
   }
 }
