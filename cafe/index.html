@@ -26,13 +26,13 @@
             <div>
                 <picture>
                     <source srcset="images/sp_main_vs@2x-100.jpg" media="(max-width:767px)">
-                    <img srcset="images/pc_first-100.jpg" alt="店内の様子">
+                    <img src="images/pc_first-100.jpg" alt="店内の様子">
                 </picture>
             </div>
             <div>
                 <picture>
                     <source srcset="images/sp_main_vs_2@2x-100.jpg" media="(max-width:767px)">
-                    <img srcset="images/slider_2.jpg" alt="店内の様子">
+                    <img src="images/slider_2.jpg" alt="店内の様子">
                 </picture>
             </div>
         </div>
@@ -143,7 +143,15 @@
                 <div><img src="images/pc_gallary_03-100.jpg" alt="店内のラウンジの様子"></div>
                 <div><img src="images/pc_gallary_02-100.jpg" alt="店内の看板の写真"></div>
                 <div><img src="images/pc_gallary_01-100.jpg" alt="カフェラテを作っている最中の様子"></div>
+                <div><img src="images/pc_gallary_05-100.jpg" alt="店内のお客さんの様子"></div>
+                <div><img src="images/pc_gallary_04-100.jpg" alt="カフェで扱うコーヒー豆"></div>
+                <div><img src="images/pc_gallary_03-100.jpg" alt="店内のラウンジの様子"></div>
+                <div><img src="images/pc_gallary_02-100.jpg" alt="店内の看板の写真"></div>
+                <div><img src="images/pc_gallary_01-100.jpg" alt="カフェラテを作っている最中の様子"></div>
             </div>
+
+            <div class="slider_arrow_prev"></div>
+            <div class="slider_arrow_next"></div>
 
         </section>
 
@@ -211,6 +219,20 @@
                 autoplaySpeed: 2000,
                 dots: true,
                 arrows: false,
+            });
+
+            $('.gallery_content').slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
+                slidesToShow: 5,
+                responsive: [
+                    {
+                        breakpoint: 767,
+                        settings: {
+                            slidesToShow: 1,
+                        },
+                    },
+                ],
             });
 
         });

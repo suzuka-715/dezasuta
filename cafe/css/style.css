@@ -324,6 +324,59 @@ main {
   padding: 0;
 }
 
+/*スライダー実装*/
+.slick-arrow {
+  display: block;
+  position: absolute;
+  padding: 0;
+  width: 20px;
+  height: 38px;
+  z-index: 1;
+}
+
+/* 共通設定 */
+
+.slick-next::before,
+.slick-next::after,
+.slick-prev::before,
+.slick-prev::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 0;
+  margin: auto;
+  content: "";
+  vertical-align: middle;
+}
+.slick-next::after,
+.slick-prev::after {
+  width: 20px;
+  height: 20px;
+  border-top: 5px solid #fff;
+  border-right: 5px solid #fff;
+}
+
+/* next */
+
+.slick-next {
+  right: 30px;
+}
+.slick-next::after {
+  right: 4px;
+  transform: rotate(45deg);
+}
+
+/* prev */
+
+.slick-prev {
+  left: 30px;
+}
+.slick-prev::after {
+  left: 4px;
+  transform: rotate(-135deg);
+}
+
 /*event*/
 .event {
   padding: 0 10px;
